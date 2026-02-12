@@ -1,17 +1,16 @@
 'use strict';
 
 import logger from "../utils/logger.js";
+import { getAppInfo } from "../models/employee.js";
 
-const dashboard = {
+const about = {
   createView(request, response) {
-    logger.info("Dashboard page loading!");
-    
-    const viewData = {
-      title: "Playlist App Dashboard"
-    };
-    
-    response.render('dashboard', viewData);
+    logger.info("About page loading!");
+
+    const data = getAppInfo();
+
+    response.render("about", data);
   },
 };
 
-export default dashboard;
+export default about;
