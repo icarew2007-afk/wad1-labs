@@ -7,9 +7,10 @@ const about = {
   createView(request, response) {
     logger.info("About page loading!");
 
-    const data = getAppInfo.getAppInfo();
+    const employees = getAppInfo.getAppInfo();
+    const employee = employees[0];   
 
-    response.render("about", data);
+    response.render("about", { employee });
   },
 };
 
