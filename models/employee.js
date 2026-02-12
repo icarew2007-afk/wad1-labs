@@ -15,4 +15,4 @@ const employee = {
 
 };
 
-export default appStore;
+export default getAppInfo;
