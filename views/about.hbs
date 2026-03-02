@@ -3,8 +3,9 @@
 <section class="ui left aligned middle aligned segment">
   
   <h2>Playlist App About</h2>
-
-  <div class="ui centered card">
+  
+  <div class="ui three card">
+    {{#each employee}}
     <div class="image">
       <img src="{{employee.image}}">
     </div>
@@ -27,6 +28,7 @@
         {{employee.mates}} contacts
       </a>
     </div>
+    {{/each}}
   </div>
 
 </section>
